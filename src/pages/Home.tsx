@@ -74,14 +74,18 @@ export default function Home() {
   
   return (
     <div className={`min-h-screen w-full transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
-      {/* 顶部导航 */}
+       {/* 顶部导航 */}
       <nav className={`sticky top-0 z-50 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
+              <img src="https://lf-code-agent.coze.cn/obj/x-ai-cn/294545100034/attachment/Logo_FlashExpress-PNG@White_20260407095715.png" alt="Flash Express" className="h-8 mr-4" />
               <h1 className="text-xl font-bold">2026年Q1季度总结</h1>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center space-x-6">
+              <a href="#module-overview" className="font-medium hover:text-blue-500 transition-colors">上线需求概况</a>
+              <a href="#okr-progress" className="font-medium hover:text-blue-500 transition-colors">OKR进展汇报</a>
+              <a href="#challenges" className="font-medium hover:text-blue-500 transition-colors">挑战与成长</a>
               <button 
                 onClick={toggleTheme}
                 className={`p-2 rounded-full ${theme === 'dark' ? 'bg-gray-700 text-yellow-300' : 'bg-gray-100 text-gray-700'}`}
@@ -105,8 +109,8 @@ export default function Home() {
           <p className="text-lg text-gray-500 dark:text-gray-400">数据截至：2026-03-31</p>
         </div>
         
-        {/* 上线需求概况 */}
-        <section className={`mb-16 p-6 rounded-xl shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+         {/* 上线需求概况 */}
+        <section id="module-overview" className={`mb-16 p-6 rounded-xl shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
           <h3 className="text-2xl font-bold mb-6 flex items-center">
             <i className="fas fa-rocket mr-2 text-blue-500"></i>上线需求概况
           </h3>
@@ -214,8 +218,8 @@ export default function Home() {
           </div>
         </section>
         
-        {/* OKR进展汇报 */}
-        <section className={`mb-16 p-6 rounded-xl shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+         {/* OKR进展汇报 */}
+        <section id="okr-progress" className={`mb-16 p-6 rounded-xl shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
           <h3 className="text-2xl font-bold mb-6 flex items-center">
             <i className="fas fa-chart-line mr-2 text-green-500"></i>OKR进展汇报
           </h3>
@@ -615,8 +619,8 @@ export default function Home() {
           </div>
         </section>
         
-        {/* 挑战与成长 */}
-        <section className={`mb-16 p-6 rounded-xl shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+         {/* 挑战与成长 */}
+        <section id="challenges" className={`mb-16 p-6 rounded-xl shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
           <h3 className="text-2xl font-bold mb-6 flex items-center">
             <i className="fas fa-mountain mr-2 text-red-500"></i>挑战与成长
           </h3>
